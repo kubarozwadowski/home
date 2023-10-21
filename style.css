@@ -86,8 +86,9 @@ nav ul li a:hover::after{
     flex-basis: 35%;
 }
 .about-col-1 img{
-    width: 80%;
+    width: 100%;
     border-radius: 15px;
+    margin-left: -30px;
 }
 .about-col-2{
     flex-basis: 60%;
@@ -198,11 +199,14 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
+    #header{
+        background-size: cover;
+    }
     .header-text{
         margin-top: 100%;
         font-size: 16px;
     }
-    .header-text h1{
+    u.header-text h1{
         margin-top: 40%;
         font-size: 40px;
     }
@@ -249,15 +253,19 @@ nav .fas{
         cursor: pointer;
         color: #000000;
     }
+    nav .fa-compass{
+        top: 35px;  /* Adjust as per your needs */
+        left: 70px;
+    }
     .sub-title{
         position: center;
     }
     .about-col-1, .about-col-2{
-        flex-basis: 95%;
+        flex-basis: 100%;
     }
     .about-col-1{
         margin-bottom: 30px;
-        margin-left: 90px;
+        margin-left: 70px;
     }
     .about-col-2{
         font-size: 20px;
@@ -271,5 +279,35 @@ nav .fas{
     }
     .contact-left{
         flex-basis: 100%;
+    }
+    .about-col-1 img {
+        display: block;
+        margin: 0 auto;
+        margin-left: calc(50% - 210px);
+        width: 350px; /* Adjust to your preferred width */
+        height: auto; /* Maintains the aspect ratio of the image */
+    }
+    .about-col-2 {
+        font-size: 90%; /* Reduces font size to 90% of the original, adjust as needed */
+    }
+    .about-col-2 {
+        text-align: center;
+        padding: 0 15px; /* Add some padding to prevent text from touching the screen edges */
+    }
+    .about-col-2 p,
+    .about-col-2 .tab-links,
+    .about-col-2 .tab-contents ul li {
+        font-size: 90%;  /* Adjust this value as needed */
+    }
+    .about-col-2 .tab-contents ul {
+        padding: 0;
+        list-style-type: none;
+    }
+    .about-col-2 .tab-links {
+        display: inline-block;
+        margin-right: 10px;  /* Adjust as needed */
+    }
+    .about-col-2 .tab-links {
+        font-size: 1.2em;  /* Adjust this value as needed */
     }
 }
